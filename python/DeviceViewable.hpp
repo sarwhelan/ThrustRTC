@@ -43,6 +43,8 @@ static PyObject* n_dv_create_basic(PyObject* self, PyObject* args)
 		ret = new DVDouble((double)PyFloat_AsDouble(value));
 	else if (type == "bool")
 		ret = new DVBool(PyObject_IsTrue(value) != 0);
+	else if (type == "string")
+		ret = new DVString((char*)PyString_AsString(value));
 	return PyLong_FromVoidPtr(ret);
 }
 

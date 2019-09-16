@@ -51,3 +51,7 @@ class DVDouble(DeviceViewable):
 class DVBool(DeviceViewable):
 	def __init__(self, value):
 		self.m_cptr = native.n_dv_create_basic('bool', value)
+
+class DVString(DeviceViewable):
+	def __init(self, value):
+		self.m_cptr = native.n_dv_create_basic('string', value)
